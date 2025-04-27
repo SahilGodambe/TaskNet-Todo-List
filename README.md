@@ -23,12 +23,12 @@ TaskNest is a simple and elegant to-do list web application designed to help you
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/to-do-list.git
+   git clone https://github.com/your-username/TaskNet-Todo-List.git
    ```
 
 2. **Navigate into the project folder**
    ```bash
-   cd to-do-list
+   cd TaskNet-Todo-List
    ```
 
 3. **Open `index.html` in your browser**
