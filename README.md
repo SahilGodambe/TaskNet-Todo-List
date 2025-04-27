@@ -17,7 +17,7 @@ TaskNest is a simple and elegant to-do list web application designed to help you
 
 | Light Mode | Dark Mode |
 |:----------:|:---------:|
-| ![Light Mode](C:\Users\godam\OneDrive\Documents\lightmode.png) | ![Dark Mode](C:\Users\godam\OneDrive\Documents\darkmode.png) |
+| ![Light Mode](D:\Web Dev Internship\Task 2\lightmode.png) | ![Dark Mode](D:\Web Dev Internship\Task 2\darkmode.png) |
 
 ## 🚀 Getting Started
 
