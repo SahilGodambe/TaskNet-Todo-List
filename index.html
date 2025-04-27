@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskNest 🪺 – Organize your day, your way.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="left-section">
+            <h1>TaskNest 🪺</h1>
+            <p>Organize your day, your way.</p>
+        </div>
+    
+        <div class="right-section">
+            <div class="theme-toggle-container">
+                <button id="themeToggle">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="contactUsButton" class="contact-us-button">Contact Us</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <!-- LEFT: To‑Do List -->
+        <section class="todo">
+            <h2>To‑Do List</h2>
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search tasks…">
+            <div class="add-task-form">
+            <input type="text" id="taskInput" placeholder="Add a new task…">
+            <button id="addTaskButton">Add Task</button>
+            </div>
+            <div id="taskGrid" class="task-grid"></div>
+        </section>
+        <!-- RIGHT: Contact Button + Contact Form -->
+        <div class="contact-section">
+            <!-- Contact Us Section -->
+            <section class="contact" id="contactFormSection">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+                </form>
+                <p id="formMsg"></p>
+            </section>
+        </div>   
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

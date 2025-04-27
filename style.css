@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background: #f4f7fa;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+header h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: #2c2c54;
+}
+header p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.theme-toggle-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+#themeToggle {
+  background: #292c6d;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#themeToggle:hover {
+  background: #1f214d;
+}
+
+#contactUsButton {
+  position: absolute;
+  top: 4.5rem;
+  right: 0rem;
+  background: #40739e;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 50;
+  white-space: nowrap;
+}
+#contactUsButton:hover {
+  background: #1e272e;
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.todo {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 650px;
+  margin: auto;
+  min-height: 350px;
+}
+.todo h2 {
+  margin-bottom: 1rem;
+  color: #1e272e;
+}
+.todo h2.dark-mode {
+  color: #f0f0f0;
+}
+.search-bar {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.add-task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.add-task-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+.add-task-form button {
+  background: #0077b6;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.add-task-form button:hover {
+  background: #023e8a;
+  transform: translateY(-2px);
+}
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px,1fr));
+  gap: 1rem;
+}
+.task-card {
+  position: relative;
+  background: #dff9fb;
+  padding: 1rem;
+  padding-right: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.task-card p {
+  margin: 0;
+  color: #1e272e;
+  word-break: break-word;
+}
+.delete-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #eb4d4b;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.delete-btn:hover {
+  background: #c62828;
+  transform: translateY(-1px);
+}
+
+.contact {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 350px;
+  position: absolute;
+  top: 11rem;
+  right: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+.contact.visible {
+  opacity: 1;
+  max-height: 800px;
+}
+.contact h2 {
+  margin-bottom: 1rem;
+  color: #1e272e;
+  font-size: 1.6rem;
+}
+.contact input, .contact textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.contact textarea {
+  height: 120px;
+}
+.contact button {
+  background: #40739e;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.contact button:hover {
+  background: #1e272e;
+  transform: translateY(-2px);
+}
+#formMsg {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: green;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+body.dark-mode header h1, body.dark-mode header p, body.dark-mode .todo h2 {
+  color: #f0f0f0;
+}
+body.dark-mode #themeToggle {
+  background: #fff;
+  color: #121212;
+}
+body.dark-mode #themeToggle:hover {
+  background: #ddd;
+}
+body.dark-mode #contactUsButton {
+  background: #40739e;
+  color: #fff;
+}
+body.dark-mode #contactUsButton:hover {
+  background: #1e272e;
+}
+body.dark-mode .contact, body.dark-mode .contact h2 {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+body.dark-mode .todo {
+  background: #1e1e1e;
+}
+body.dark-mode .task-card {
+  background: #2e2e2e;
+}
+body.dark-mode .task-card p {
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .todo {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+  .add-task-form {
+    flex-direction: column;
+  }
+  .add-task-form input,
+  .add-task-form button {
+    width: 100%;
+  }
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+  header {
+    padding-top: 4rem;
+  }
+  #themeToggle, #contactUsButton {
+    position: static;
+    margin: 0.5rem auto;
+    display: block;
+  }
+  .contact {
+    position: static;
+    max-height: none;
+    opacity: 1;
+    margin: 1rem auto;
+    width: 100%;
+  }
+}
